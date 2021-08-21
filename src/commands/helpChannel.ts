@@ -35,10 +35,10 @@ export const setHelpChannelPermissions = async (channel: Discord.TextChannel | D
 
   if (!role) return
 
-  subChannel.overwritePermissions([
+  await subChannel.overwritePermissions([
     { id: '877273210540920852', deny: ['VIEW_CHANNEL']},
     { id: role.id, allow: ['VIEW_CHANNEL']}
-  ]).then(() => console.log('changed')).catch(err => console.log(err))
+  ])
 }
 
 export default helpChannel

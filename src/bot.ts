@@ -14,7 +14,7 @@ const buildGI = async (bot: string) => {
 
   client.on('ready', () => {
     if (client.user) {
-      console.log(`Launched ${client.user.username}`)  
+      console.log(`🚀 Launched ${client.user.username}`)  
       client.user.setActivity(`over y'all`, { type: 'WATCHING'})  
     }
     events(client)
