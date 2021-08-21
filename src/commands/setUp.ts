@@ -10,6 +10,7 @@ import languageRolesEmbed from '../embeds/languageRoles'
 import questionChecklistEmbed from '../embeds/questionChecklist'
 import newProgrammers from '../embeds/newProgrammers'
 import commandsEmbed from '../embeds/commands'
+import helpChannelExplanationEmbed from '../embeds/helpChannelExplanation'
 
 const setUp = async ({ client, cmd, args, msg }: Message) => {
   const channels = getChannels(client)
@@ -17,13 +18,15 @@ const setUp = async ({ client, cmd, args, msg }: Message) => {
   if (args[0] === 'clear') await clear(channels)
 
   let languageRoles = await channels.roles.send(languageRolesEmbed())
-  await channels.faq.send(questionChecklistEmbed())
-  await channels.faq.send(newProgrammers())
-  await channels.faq.send(commandsEmbed())
   
   languages.forEach(lang => {
     languageRoles.react(lang.emoji)
   })
+
+  await channels.faq.send(questionChecklistEmbed())
+  await channels.faq.send(newProgrammers())
+  await channels.faq.send(commandsEmbed())
+  await channels.faq.send(helpChannelExplanationEmbed())
 }
 
 async function clear (channels: Channels) {
