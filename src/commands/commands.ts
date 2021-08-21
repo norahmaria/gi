@@ -4,6 +4,9 @@ import Message from '../types/Message'
 import commandsEmbed from '../embeds/commands'
 import guide from './guide'
 import invite from './invite'
+import questionChecklistEmbed from '../embeds/questionChecklist'
+import projectEmbed from '../embeds/projects'
+import projects from './projects'
 
 const commands = ({cmd, args, client, msg, channel}: Message) => {
   const subChannel = channel as Discord.TextChannel | Discord.NewsChannel
@@ -19,6 +22,14 @@ const commands = ({cmd, args, client, msg, channel}: Message) => {
 
     case 'commands':
       subChannel.send(commandsEmbed())
+      break
+
+    case 'ask':
+      subChannel.send(questionChecklistEmbed())
+      break
+
+    case 'project':
+      projects({args, client, msg, channel})
       break
     
     default:

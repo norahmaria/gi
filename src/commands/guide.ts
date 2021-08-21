@@ -7,7 +7,7 @@ import getLanguageIconsFromStringArray from '../utils/getLanguageIconsFromString
 
 const guide = async ({ msg, args }: Message) => {  
   for (let i = 0; i < languages.length; i++) {
-    if (languages[i].name === args[0] || languages[i].emoji === args[0]) {
+    if (languages[i].name === args[0] || languages[i].emoji === args[0] || !args[0]) {
 
       const { color, textColor, emoji, desc, channels, resources } = languages[i]
       const attachment = new Discord.MessageAttachment(`./src/assets/gi-${textColor}.png`, 'gicon.png')

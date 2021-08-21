@@ -37,7 +37,7 @@ export function getVariables (msg: Discord.Message) {
   const isHelpChannel = channel.parent?.name.toLowerCase().includes('help')
   const isSuggestionChannel = channel.parent?.name.toLowerCase().includes('suggestions') 
 
-  const args: String[] = content?.slice(PREFIX.length).split(/ +/)
+  const args: String[] = content?.toLowerCase().slice(PREFIX.length).split(/ +/)
   const cmd = args?.shift()?.toLowerCase()
 
   return { channel, isServerOwner, isSuggestionChannel, isHelpChannel, args, cmd }
