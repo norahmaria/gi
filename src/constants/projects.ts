@@ -6,7 +6,7 @@ const types = {
 
 const socialNetwork = {
   name: 'Social Network',
-  command: 'social',
+  command: 'socialnetwork',
   type: types.fullstack,
   summary: 'Take inspiration from Twitter, Instagram, TikTok, Facebook etc. The great thing about this project is it can be as simple or complex as you want.',
   features: [{
