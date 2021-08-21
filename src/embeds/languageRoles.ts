@@ -3,7 +3,7 @@ import Discord from 'discord.js'
 import { yellow } from '../constants/colors'
 import languages from '../constants/languages/languages'
 
-export const languageRolesEmbedId = '878576557331976212'
+export const languageRolesEmbedId = '878652480450359336'
 const langDescriptions = languages.map(lang => `${lang.emoji} for **${lang.desc}**`).join('\n\n')
 
 const languageRolesEmbed = () => {

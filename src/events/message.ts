@@ -8,9 +8,6 @@ import ownerCommands from '../commands/ownerCommands'
 import helpChannel from '../commands/helpChannel'
 import suggestion from '../commands/suggestion'
 
-const RESOURCE_SUGGESTIONS = '877892527972319276'
-const BOT_SUGGESTIONS = '877885425140760609'
-
 const message = async ({ client, msg }: Params) => {
   if (!msg || !msg.content) return
 
@@ -19,8 +16,8 @@ const message = async ({ client, msg }: Params) => {
 
   const thanks = ["thank you", "thanks"]
   if (thanks.includes(content.toLowerCase())) msg.react('❤️')
+  
   if (isHelpChannel) helpChannel({channel, msg, cmd, args, client})
-
   if (isSuggestionChannel) suggestion({channel, msg, args, client})
 
   if (!cmd || !msg.content.startsWith(PREFIX)) return
