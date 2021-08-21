@@ -10,7 +10,7 @@ const languageRolesEmbed = () => {
   return new Discord.MessageEmbed()
     .setColor(yellow)
     .setTitle('Pick your languages')
-    .setDescription(`Please **react** with the languages you've learnt or \n are currently trying to learn, this will give you access to the different help channels. \n\n ${langDescriptions}`)
+    .setDescription(`Please **react** with the languages you've learnt or are currently trying to learn, this will give you access to the different help channels. \n\n ${langDescriptions}`)
 }
 
 export default languageRolesEmbed

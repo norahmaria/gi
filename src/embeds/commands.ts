@@ -14,7 +14,7 @@ const commandsEmbed = () => {
     .setColor(yellow)
     .setTitle('Gi <:gi:877885515905511454> Commands')
     .setDescription(`
-      Gi is a bot made by <@244046961907466260>, and is fairly basic but ever growing. You can see the code for Gi on [github](https://github.com/NorahSketch/gi), and suggestions are always welcome.`)
+      Gi is a bot made by <@244046961907466260>, and is fairly basic but ever growing. You can see the code for Gi on [github](https://github.com/NorahSketch/gi), and suggestions are always welcome in <#877885425140760609>. You can always see her commands by typing !commands`)
     .addFields(
       {name: '!guide language', value: `!guide followed by a language will send some learning resources for the language. \n\n ${languageGuides}`}
     )
