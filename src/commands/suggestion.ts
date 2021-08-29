@@ -9,10 +9,6 @@ const suggestion = async ({ cmd, msg, channel }: Message) => {
   const subChannel = channel as Discord.TextChannel | Discord.NewsChannel
   if (!msg || msg?.author?.bot || !msg.author) return
 
-  // const words = msg.content?.split(' ')
-  // const links = words?.filter(word => word.startsWith('https'))
-  // if (!links) return
-
   const avatar = msg.author.avatarURL()
   if (!avatar || avatar === undefined) return
 
